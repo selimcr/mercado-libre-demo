@@ -1,0 +1,70 @@
+@import '../../../../styles/global';
+
+.product-card {
+  padding: $small-size;
+  display: flex;
+  flex-direction: row;
+
+  .img-container {
+
+    height: $product-img-size;
+    width: $product-img-size;
+    margin-right: $small-size;
+
+    a {
+      display: block;
+    }
+
+    a, img {
+      height: 100%;
+      width: 100%;
+      border-radius: $product-img-radius;
+    }
+  }
+
+  .details {
+
+    flex-grow: 1;
+
+    .product-header {
+      margin: $medium-size 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @media (min-width: $bp-tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .price {
+        font-size: $fs-lg;
+
+        .free-shipping-logo {
+          width: $small-size;
+          height: $small-size;
+          margin-left: $small-size;
+        }
+      }
+
+      .state {
+        font-size: $fs-xs;
+        color: $grey;
+      }
+    }
+
+    .content {
+      font-size: $fs-default;
+
+      a {
+        text-decoration: none;
+        color: $dark;
+      }
+
+      p {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

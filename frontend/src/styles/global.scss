@@ -1,0 +1,59 @@
+/*
+ Global Styles
+
+ This file should only be used for site wide styles. If the style is specific to a component then it
+ should be in a file next to the component
+*/
+
+@import './partials/fontsize';
+@import './partials/colors';
+@import './partials/sizes';
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: $fs-default;
+  background-color: $light-grey;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 12fr;
+  grid-template-areas: 
+    "inline-container";
+  height: 100%;
+  padding: 0 $small-size;
+
+  @media (min-width: $bp-tablet) {
+    grid-template-columns:  1fr 10fr 1fr;
+    grid-template-areas: 
+      ". inline-container .";
+  }
+}
+
+.inline-container {
+  grid-area: inline-container;
+}

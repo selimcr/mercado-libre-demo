@@ -1,0 +1,16 @@
+@import '../../styles/global';
+
+.breadcrumb {
+  padding: $small-size 0;
+  height: 40px;
+  font-size: $fs-sm;
+  line-height: 8px;
+
+  span {
+    color: $grey;
+
+    &.latest {
+      font-weight: 700;
+    }
+  }
+}
